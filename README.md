@@ -84,35 +84,36 @@ Below are some screenshots of the project in action:
 
 ### 1. **Data Ingestion**
 
-![Training Pipeline](path/to/your/screenshot_training_pipeline.png)
+![Data Ingestion](screenshots/data_ingestion.png)
 
 ### 2. **Data Transformation**
 
-![Prediction Pipeline](path/to/your/screenshot_prediction_pipeline.png)
+![Data Transformation](screenshots/data_transformation.png)
 
 ### 3. **Model Training**
 
-![Model Monitoring](path/to/your/screenshot_model_monitoring.png)
+![Model Training](screenshots/model_training.png)
 
 ### 4. **Training Pipeline**
 
-![Model Monitoring](path/to/your/screenshot_model_monitoring.png)
+![Training Pipeline](screenshots/training_pipeline.png)
 
-### 5. **Testing Pipeline**
+### 5. **Prediction Pipeline**
 
-![Model Monitoring](path/to/your/screenshot_model_monitoring.png)
+![Prediction Pipeline](screenshots/prediction_pipeline.png)
 
 ### 6. **Logging**
 
-![Model Monitoring](path/to/your/screenshot_model_monitoring.png)
+![Logging](screenshots/logger.png)
 
 ### 7. **Exception**
 
-![Model Monitoring](path/to/your/screenshot_model_monitoring.png)
+![Exception](screenshots/exception.png)
 
 ### 8. **Log File**
 
-![Model Monitoring](path/to/your/screenshot_model_monitoring.png)
+![Log File](screenshots/logfile.png)
+
 ---
 
 ## Use Case
