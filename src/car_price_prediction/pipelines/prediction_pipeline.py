@@ -14,8 +14,21 @@ class PredictionPipeline:
         """
         Initializes the PredictionPipeline class.
         No parameters are required for initialization.
+        
+        It initialize the model and preprocesser object to do the prediction later on.
         """
-        pass
+        
+        try:
+            # Load the trained model and preprocessor from the saved file paths.
+            model_path = "artifacts\\model.pkl"  # Path to the trained model.
+            preprocessor_path = "artifacts\\preprocessor.pkl"  # Path to the preprocessor.
+            
+            self.model = load_object(model_path)  # Load the model.
+            self.preprocessor = load_object(preprocessor_path)  # Load the preprocessor.
+            
+        except Exception as e:
+            # If any exception occurs, raise a custom exception with the error details.
+            raise CustomException(e, sys)
     
     def predict(self, feature):
         """
@@ -31,18 +44,12 @@ class PredictionPipeline:
             CustomException: If there is an error during the prediction process.
         """
         try:
-            # Load the trained model and preprocessor from the saved file paths.
-            model_path = "artifacts\\model.pkl"  # Path to the trained model.
-            preprocessor_path = "artifacts\\preprocessor.pkl"  # Path to the preprocessor.
-            
-            model = load_object(model_path)  # Load the model.
-            preprocessor = load_object(preprocessor_path)  # Load the preprocessor.
-            
+                        
             # Transform the input data using the preprocessor.
-            scaled_data = preprocessor.transform(feature)
+            scaled_data = self.preprocessor.transform(feature)
             
             # Use the model to predict the output (car price).
-            predicted_data = model.predict(scaled_data)
+            predicted_data = self.model.predict(scaled_data)
             
             return predicted_data[0]  # Return the first predicted value.
         
