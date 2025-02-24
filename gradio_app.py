@@ -42,7 +42,7 @@ iface = gr.Interface(
     fn = predictor,  # The function to call for prediction
     inputs= [
         # Defining the input components for the Gradio interface:
-        gr.Number(label="Year", maximum=2050, minimum=2000, step=1),  # Year of the car (numeric input)
+        gr.Number(label="Year", maximum=2050, minimum=2000, step=1, value=2000),  # Year of the car (numeric input)
         gr.Number(label="Selling Price"),  # Selling price (numeric input)
         gr.Number(label="Kms Driven"),  # Kilometers driven (numeric input)
         gr.Dropdown(choices=['Petrol','Diesel','CNG'], label="Fuel Type"),  # Fuel type dropdown
