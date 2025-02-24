@@ -1,0 +1,10 @@
+Model Name,Train Score,Test Score,Model Params
+Linear Regression,0.6492736333762679,0.6806875805867946,{}
+Support Vector Machine,-0.03029362965034932,-0.0909966598283134,{'kernel': 'linear'}
+K Nearest Neighbor,0.8719218345770233,0.8313865172514843,{'n_neighbors': 3}
+Ridge,0.6492615090480887,0.6817445273709204,{'alpha': 2}
+Lasso,0.6492736333747846,0.6806875431947508,{'alpha': 0.5}
+Decision Tree,1.0,0.8301038730643018,{'criterion': 'absolute_error'}
+Random Forest,0.9549271199054977,0.8590537690897915,{'n_estimators': 256}
+Gradient Boost,0.9842961685969794,0.8091017260572373,"{'learning_rate': 0.1, 'n_estimators': 64, 'subsample': 0.9}"
+Ada Boost,0.7322473096568892,0.7300616239726025,"{'learning_rate': 0.001, 'n_estimators': 8}"

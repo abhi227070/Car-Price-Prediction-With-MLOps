@@ -104,7 +104,7 @@ def evaluate_models(x_train, y_train, x_test, y_test, models, params):
         logging.info("Report Making Started.")
         
         # Initialize an empty dictionary to store model evaluation results
-        report = {}
+        report = {"Model Name": [], "Train Score": [], "Test Score": [], "Model Params": []}
         
         # Iterate through the models and their corresponding hyperparameters
         for i in range(len(list(models))):
@@ -130,7 +130,10 @@ def evaluate_models(x_train, y_train, x_test, y_test, models, params):
             test_model_score = r2_score(y_test, y_test_pred)
             
             # Store the test R-squared score in the report dictionary
-            report[list(models.keys())[i]] = test_model_score
+            report['Model Name'].append(list(models.keys())[i])
+            report["Train Score"].append(train_model_score)
+            report["Test Score"].append(test_model_score)
+            report['Model Params'].append(gs.best_params_)
             
         logging.info("Report made successfully.")
         
